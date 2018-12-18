@@ -3,23 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/29 15:05:18 by awindham          #+#    #+#             */
-/*   Updated: 2018/12/01 17:12:55 by awindham         ###   ########.fr       */
+/*   Created: 2018/11/30 13:01:57 by zfaria            #+#    #+#             */
+/*   Updated: 2018/12/02 18:13:36 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-char	*ft_strstr(char const *h, char const *n)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	if (!*n)
-		return ((char*)h);
-	while (ft_strncmp(h, n, ft_strlen(n)) && *h)
-		h++;
-	if (*h == '\0')
-		return (0);
-	else
-		return ((char*)h);
+	int exists;
+	int i;
+
+	if (!*needle || haystack == needle || (!*haystack && !*needle))
+		return ((char *)haystack);
+	i = 0;
+	while (*haystack)
+	{
+		if (*haystack == *needle)
+		{
+			exists = 1;
+			i = 0;
+			while (needle[i])
+			{
+				if (haystack[i] != needle[i])
+					exists = 0;
+				i++;
+			}
+			if (exists)
+				return ((char *)haystack);
+		}
+		haystack++;
+	}
+	return (NULL);
 }

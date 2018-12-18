@@ -3,40 +3,83 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/03 18:22:45 by awindham          #+#    #+#             */
-/*   Updated: 2018/12/10 20:54:25 by awindham         ###   ########.fr       */
+/*   Created: 2018/12/04 09:34:34 by zfaria            #+#    #+#             */
+/*   Updated: 2018/12/18 14:58:33 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include "libft.h"
 
-/*
-** TODO:
-**	remove comments
-**	死にたい
-*/
+#define FD_MAX 5000
 
-int		get_next_line(const int fd, char **line)
+static int		read_next_line(const int fd, char **thread, size_t buff_size)
 {
-	char				*line_buffer;
-	static int			bytes_read;
-	unsigned long int	i;
+	char	*buf;
+	size_t	status;
 
-	if ((line_buffer = malloc(8192)) == 0 ||
-			(read(fd, line_buffer, 0)) < 0 ||
-			fd < 0)
+	buf = ft_strnew(buff_size);
+	if (!buf)
 		return (-1);
-	i = 0;
-	while ((bytes_read = read(fd, &line_buffer[i], 1)) > 0)
+	status = 0;
+	while (!ft_strchr(*thread, '\n') && (status = read(fd, buf, buff_size)) > 0)
 	{
-		if (line_buffer[i] == '\n')
-			break ;
-		i++;
+		*thread = ft_fstrjoin(*thread, buf, 1);
+		ft_strclr(buf);
 	}
-	line_buffer[i] = 0;
-	*line = line_buffer;
-	return (bytes_read || (*line_buffer));
+	ft_strdel(&buf);
+	if (status < buff_size)
+		return (0);
+	return (1);
+}
+
+static int		grab_line(char **thread, char **line)
+{
+	int	i;
+
+	i = ft_strchri(*thread, '\n');
+	if (i == -1)
+	{
+		*line = ft_strdup(*thread);
+		ft_strclr(*thread);
+		return (0);
+	}
+	*line = ft_strnew(i);
+	ft_memcpy(*line, *thread, i);
+	ft_memmove(*thread, *thread + i + 1, ft_strlen(*thread) - i);
+	return (1);
+}
+
+int				get_next_line(const int fd, char **line, size_t buff_size)
+{
+	static char	*threads[FD_MAX];
+	int			status;
+	int			readstatus;
+
+	if (fd < 0 || fd >= FD_MAX)
+		return (-1);
+	if (read(fd, threads[fd], 0) == -1)
+		return (-1);
+	if (line == NULL)
+		return (-1);
+	if (!threads[fd])
+	{
+		threads[fd] = ft_strnew(buff_size);
+		if (!threads[fd] && !*line)
+			return (-1);
+	}
+	readstatus = read_next_line(fd, &threads[fd], buff_size);
+	status = grab_line(&threads[fd], line);
+	if (readstatus == 0 && status == 0 && !**line)
+	{
+		ft_strdel(&threads[fd]);
+		return (0);
+	}
+	else
+		return (1);
 }
