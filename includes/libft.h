@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 15:42:25 by awindham          #+#    #+#             */
-/*   Updated: 2018/12/18 15:12:55 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/01/01 12:24:29 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,6 @@ void				ft_lstadd(t_list **alst, t_list *new);
 char				*ft_fstrjoin(char *s1, char *s2, int f);
 int					get_next_line(int fd, char **line, size_t buff_size);
 int					ft_strchri(char *str, char c);
+int					ft_abs(int num);
 
 #endif
