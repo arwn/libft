@@ -6,13 +6,13 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 12:50:00 by zfaria            #+#    #+#             */
-/*   Updated: 2019/01/02 12:52:49 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/01/02 12:57:25 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putarr(char **str)
+void	ft_putarr(char **str, char c)
 {
-	ft_putarr_fd(str, 1);
+	ft_putarr_fd(str, c, 1);
 }
