@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 20:58:50 by awindham          #+#    #+#             */
-/*   Updated: 2018/12/01 15:11:26 by awindham         ###   ########.fr       */
+/*   Updated: 2019/01/02 12:55:37 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(const char *s, int fd)
 {
-	if (s && fd < 65535 && fd >= 0)
-		while (*s)
-			if (write(fd, s++, 1) < 1)
-				return ;
+	if (s)
+		write(fd, s, ft_strlen(s));
 }

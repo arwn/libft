@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 15:42:25 by awindham          #+#    #+#             */
-/*   Updated: 2019/01/02 12:49:53 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/01/02 12:54:59 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void				ft_putendl(const char *s);
 void				ft_putnbr(int n);
 void				ft_strdel(char **as);
 void				ft_putchar_fd(char c, int fd);
-void				ft_putstr_fd(char *s, int fd);
+void				ft_putstr_fd(const char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 char				*ft_strjoin(const char *s1, const char *s2);
 size_t				ft_strlen(const char *s);
