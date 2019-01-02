@@ -6,11 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 15:42:25 by awindham          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2019/01/02 11:50:00 by zfaria           ###   ########.fr       */
-=======
-/*   Updated: 2019/01/01 12:24:29 by zfaria           ###   ########.fr       */
->>>>>>> 76748d77f5a4bcb97bffc917fe838d9308ff52ce
+/*   Updated: 2019/01/02 12:49:53 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +92,7 @@ int					get_next_line(int fd, char **line, size_t buff_size);
 int					ft_strchri(char *str, char c);
 int					ft_abs(int num);
 int					ft_arrlen(void **arr);
+void				ft_putarr(char **str);
+void				ft_putarr_fd(char **str, int fd);
 
 #endif
