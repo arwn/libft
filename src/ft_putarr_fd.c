@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putarr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/28 20:58:50 by awindham          #+#    #+#             */
-/*   Updated: 2019/01/02 12:55:37 by zfaria           ###   ########.fr       */
+/*   Created: 2019/01/02 12:51:49 by zfaria            #+#    #+#             */
+/*   Updated: 2019/01/02 13:00:01 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
-void	ft_putstr_fd(const char *s, int fd)
+void	ft_putarr_fd(char **str, char c, int fd)
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
+	if (str)
+		while (*str)
+		{
+			ft_putstr_fd(*str++, fd);
+			if (*str)
+				ft_putchar_fd(c, fd);
+		}
 }

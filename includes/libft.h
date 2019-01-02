@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 15:42:25 by awindham          #+#    #+#             */
-/*   Updated: 2019/01/01 12:24:29 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/01/02 12:58:18 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void				ft_putendl(const char *s);
 void				ft_putnbr(int n);
 void				ft_strdel(char **as);
 void				ft_putchar_fd(char c, int fd);
-void				ft_putstr_fd(char *s, int fd);
+void				ft_putstr_fd(const char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 char				*ft_strjoin(const char *s1, const char *s2);
 size_t				ft_strlen(const char *s);
@@ -91,5 +91,8 @@ char				*ft_fstrjoin(char *s1, char *s2, int f);
 int					get_next_line(int fd, char **line, size_t buff_size);
 int					ft_strchri(char *str, char c);
 int					ft_abs(int num);
+int					ft_arrlen(void **arr);
+void				ft_putarr(char **str, char c);
+void				ft_putarr_fd(char **str, char c, int fd);
 
 #endif

@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_arrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/28 20:58:50 by awindham          #+#    #+#             */
-/*   Updated: 2019/01/02 12:55:37 by zfaria           ###   ########.fr       */
+/*   Created: 2019/01/02 11:49:27 by zfaria            #+#    #+#             */
+/*   Updated: 2019/01/02 11:50:32 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "libft.h"
-
-void	ft_putstr_fd(const char *s, int fd)
+int	ft_arrlen(void **arr)
 {
-	if (s)
-		write(fd, s, ft_strlen(s));
+	int i;
+
+	i = 0;
+	while (arr[i])
+		i++;
+	return (i);
 }
