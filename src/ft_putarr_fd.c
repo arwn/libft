@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 12:51:49 by zfaria            #+#    #+#             */
-/*   Updated: 2019/01/02 12:58:04 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/01/02 13:00:01 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	ft_putarr_fd(char **str, char c, int fd)
 		while (*str)
 		{
 			ft_putstr_fd(*str++, fd);
-			ft_putchar_fd(c, fd);
+			if (*str)
+				ft_putchar_fd(c, fd);
 		}
 }
