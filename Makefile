@@ -10,6 +10,7 @@ vpath %.c src
 OBJ = $(subst .c,.o,$(subst src,obj,$(wildcard src/*.c)))
 
 obj/%.o: %.c
+	@mkdir -p obj
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 $(NAME): $(OBJ)
@@ -24,6 +25,6 @@ clean:
 	rm -rf $(OBJ)
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -rf $(NAME) obj/
 
 re : fclean $(NAME)
