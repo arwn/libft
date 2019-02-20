@@ -6,12 +6,17 @@
 /*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 12:04:12 by awindham          #+#    #+#             */
-/*   Updated: 2019/02/20 12:29:37 by awindham         ###   ########.fr       */
+/*   Updated: 2019/02/20 12:35:37 by awindham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
 #include <libft.h>
+
+/*
+** this function right aligns text with a delimeter
+** vargs must be null terminated.
+*/
 
 void	ft_printpad(int w, char *delim, ...)
 {
