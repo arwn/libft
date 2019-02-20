@@ -6,7 +6,7 @@
 /*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 15:42:25 by awindham          #+#    #+#             */
-/*   Updated: 2019/02/20 10:19:31 by awindham         ###   ########.fr       */
+/*   Updated: 2019/02/20 12:24:59 by awindham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,6 @@ int					ft_arrlen(void **arr);
 void				ft_putarr(char **str, char c);
 void				ft_putarr_fd(char **str, char c, int fd);
 void				*ft_realloc(void *p, size_t o, size_t n);
+void				ft_printpad(int w, char *delim, ...);
 
 #endif
