@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 14:25:56 by zfaria            #+#    #+#             */
-/*   Updated: 2019/02/22 14:55:28 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/02/22 15:05:16 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_itoa(int n)
 	int				i;
 	unsigned int	num;
 
-	res = ft_strnew(13);
 	if (n == 0)
 		return (ft_strdup("0"));
+	res = ft_strnew(13);		
 	if (res)
 	{
 		i = 0;
