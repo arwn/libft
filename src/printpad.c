@@ -6,7 +6,7 @@
 /*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 12:04:12 by awindham          #+#    #+#             */
-/*   Updated: 2019/02/25 12:40:46 by awindham         ###   ########.fr       */
+/*   Updated: 2019/02/25 13:25:39 by awindham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** vargs must be null terminated.
 */
 
-void	ft_printpad(int w, char *delim, char align,...)
+void	ft_printpad(int w, char *delim, int align,...)
 {
 	va_list args;
 	char *s;
