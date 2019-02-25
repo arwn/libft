@@ -6,7 +6,7 @@
 /*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 12:04:12 by awindham          #+#    #+#             */
-/*   Updated: 2019/02/25 13:31:10 by awindham         ###   ########.fr       */
+/*   Updated: 2019/02/25 13:33:56 by awindham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,10 @@ void	ft_printpad(int w, char *delim, int align,...)
 			i++;
 		}
 		if (align == 'r')
+		{
 			ft_putstr(s);
+			ft_putchar(' ');
+		}
 	}
 	va_end(args);
 }
