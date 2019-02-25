@@ -6,7 +6,7 @@
 /*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/20 12:04:12 by awindham          #+#    #+#             */
-/*   Updated: 2019/02/25 13:25:39 by awindham         ###   ########.fr       */
+/*   Updated: 2019/02/25 13:31:10 by awindham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,14 @@ void	ft_printpad(int w, char *delim, int align,...)
 	while((s = va_arg(args, char *)) != NULL)
 	{
 		i = 0;
-		if (align == 'r')
+		if (align == 'l')
 			ft_putstr(s);
 		while (i < (w - (int)ft_strlen(s)) / (int)ft_strlen(delim))
 		{
 			ft_putstr(delim);
 			i++;
 		}
-		if (align == 'l')
+		if (align == 'r')
 			ft_putstr(s);
 	}
 	va_end(args);
