@@ -28,3 +28,6 @@ fclean: clean
 	rm -rf $(NAME) obj/
 
 re : fclean $(NAME)
+
+norm:
+	norminette src/. libft.h
