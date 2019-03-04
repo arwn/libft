@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 13:17:36 by zfaria            #+#    #+#             */
-/*   Updated: 2019/03/01 14:17:09 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/03/04 09:30:05 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 
 void	free_tab(char **tab)
 {
+	int i;
+
+	i = 0;
 	if (tab)
 	{
-		while (*tab)
+		while (tab[i])
 		{
-			free(*tab);
-			*tab = 0;
-			tab++;
+			free(tab[i]);
+			tab[i] = 0;
+			i++;
 		}
 		free(tab);
 	}
