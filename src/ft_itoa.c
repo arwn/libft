@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 14:25:56 by zfaria            #+#    #+#             */
-/*   Updated: 2019/02/28 22:09:00 by awindham         ###   ########.fr       */
+/*   Updated: 2019/03/05 12:55:46 by awindham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,11 @@ char	*ft_itoa(int n)
 			res[i++] = num % 10 + '0';
 			num /= 10;
 		}
-		(n < 0) ? res[i++] = '-' : res[i] = 0;
+		if (n < 0)
+			res[i++] = '-';
+		else
+			res[i] = 0;
 		ft_strrev((unsigned char *)res);
-		return (res);
 	}
-	return (NULL);
+	return (res);
 }
