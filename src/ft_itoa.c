@@ -32,9 +32,7 @@ char	*ft_itoa(int n)
 			res[i++] = num % 10 + '0';
 			num /= 10;
 		}
-		if (n < 0)
-			res[i++] = '-';
-		res[i] = 0;
+		(n < 0) ? res[i++] = '-' : res[i] = 0;
 		ft_strrev((unsigned char *)res);
 		return (res);
 	}
