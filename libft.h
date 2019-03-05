@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 15:42:25 by awindham          #+#    #+#             */
-/*   Updated: 2019/03/01 13:34:00 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/03/04 16:38:05 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,7 @@ void				*ft_realloc(void *p, size_t o, size_t n);
 void				ft_printpad(int w, char *delim, int align, ...);
 void				ft_printf(char *fmt, ...);
 void				free_tab(char **tab);
+int					array_len(char **tab);
+int					dir_size(char *dirs);
 
 #endif
