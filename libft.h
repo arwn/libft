@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 15:42:25 by awindham          #+#    #+#             */
-/*   Updated: 2019/03/06 12:00:49 by awindham         ###   ########.fr       */
+/*   Updated: 2019/03/07 09:55:44 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,6 @@ int					array_len(char **tab);
 int					dir_size(char *dirs);
 char				**arrdup(char **arr);
 char				*ft_strvcat(char *s, ...);
+int64_t				ft_rand(void);
 
 #endif
