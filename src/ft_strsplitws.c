@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 13:25:08 by awindham          #+#    #+#             */
-/*   Updated: 2019/03/07 13:02:28 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/03/07 14:51:28 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int		wordlen(char const *str)
 	return (len);
 }
 
-int		ft_countwordsws(char const *str)
+int				ft_countwordsws(char const *str)
 {
 	int count;
 	int	i;
