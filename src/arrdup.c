@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 16:36:00 by zfaria            #+#    #+#             */
-/*   Updated: 2019/03/05 10:42:53 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/03/06 14:46:45 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ char	**arrdup(char **arr)
 		res[i] = ft_strdup(arr[i]);
 		i++;
 	}
+	res[len] = 0;
 	return (res);
 }
