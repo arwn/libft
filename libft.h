@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 15:42:25 by awindham          #+#    #+#             */
-/*   Updated: 2019/03/07 09:55:44 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/03/07 12:57:51 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,7 @@ int					array_len(char **tab);
 int					dir_size(char *dirs);
 char				**arrdup(char **arr);
 char				*ft_strvcat(char *s, ...);
+char				**ft_strsplitws(char const *s);
 int64_t				ft_rand(void);
 
 #endif
