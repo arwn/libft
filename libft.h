@@ -6,7 +6,7 @@
 /*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 15:42:25 by awindham          #+#    #+#             */
-/*   Updated: 2019/03/06 12:00:49 by awindham         ###   ########.fr       */
+/*   Updated: 2019/03/08 13:06:00 by awindham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+int					ft_getopt(int nargc, char *const nargv[], const char *ostr);
 int					ft_atoi(const char *s);
 void				ft_bzero(void *s, size_t n);
 int					ft_isalnum(int c);
