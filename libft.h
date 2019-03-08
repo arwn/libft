@@ -6,7 +6,7 @@
 /*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/08 13:25:48 by awindham          #+#    #+#             */
-/*   Updated: 2019/03/08 13:26:33 by awindham         ###   ########.fr       */
+/*   Updated: 2019/03/08 13:33:05 by awindham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-int			g_opterr = 1;
-int			g_optind = 1;
+int			g_opterr;
+int			g_optind;
 int			g_optopt;
 int			g_optreset;
 char		*g_optarg;
