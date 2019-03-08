@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   arrdup.c                                           :+:      :+:    :+:   */
+/*   rand.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/04 16:36:00 by zfaria            #+#    #+#             */
-/*   Updated: 2019/03/06 14:46:45 by zfaria           ###   ########.fr       */
+/*   Created: 2019/03/07 09:38:37 by zfaria            #+#    #+#             */
+/*   Updated: 2019/03/07 12:19:36 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-#include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <fcntl.h>
 
-char	**arrdup(char **arr)
+int64_t	ft_rand(void)
 {
-	char	**res;
-	int		i;
-	int		len;
+	int		fd;
+	int64_t	buf;
 
-	i = 0;
-	len = array_len(arr);
-	res = malloc(sizeof(char *) * (len + 1));
-	while (i < len)
-	{
-		res[i] = ft_strdup(arr[i]);
-		i++;
-	}
-	res[len] = 0;
-	return (res);
+	fd = open("/dev/random", O_RDONLY);
+	read(fd, &buf, 8);
+	close(fd);
+	return (buf);
 }

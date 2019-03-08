@@ -29,5 +29,9 @@ fclean: clean
 
 re : fclean $(NAME)
 
+test: $(NAME)
+	$(CC) $(CFLAGS) test.c $(NAME)
+	./a.out
+
 norm:
 	norminette src/. libft.h
