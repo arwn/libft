@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/08 13:25:48 by awindham          #+#    #+#             */
-/*   Updated: 2019/03/08 13:33:05 by awindham         ###   ########.fr       */
+/*   Updated: 2019/03/15 12:26:39 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,5 +111,6 @@ char				**arrdup(char **arr);
 char				*ft_strvcat(char *s, ...);
 char				**ft_strsplitws(char const *s);
 int64_t				ft_rand(void);
+char				*ft_toupperstr(char *str);
 
 #endif
