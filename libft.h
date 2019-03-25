@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/08 13:25:48 by awindham          #+#    #+#             */
-/*   Updated: 2019/03/15 12:26:39 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/03/25 15:47:24 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,5 +112,7 @@ char				*ft_strvcat(char *s, ...);
 char				**ft_strsplitws(char const *s);
 int64_t				ft_rand(void);
 char				*ft_toupperstr(char *str);
+void				*ft_lstat(t_list *list, int index);
+int					ft_lstlen(t_list *list);
 
 #endif
