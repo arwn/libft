@@ -5,9 +5,9 @@ CFLAGS=-I. -Wall -Werror -Wextra -std=c89 -pedantic-errors $(CFLAGS_SPEED)
 CFLAGS_SPEED=-finline-functions -Ofast
 DEPS=libft.h
 
-vpath %.c src
+vpath %.c src obj
 
-OBJ = $(subst .c,.o,$(subst src,obj,$(wildcard src/*.c)))
+OBJ = $(subst .c,.o,$(subst src/*,obj,$(shell find . -name *.c)))
 
 obj/%.o: %.c
 	@mkdir -p obj
