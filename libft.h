@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/08 13:25:48 by awindham          #+#    #+#             */
-/*   Updated: 2019/03/26 14:51:07 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/03/27 10:13:02 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,9 @@ int			ft_isspace(int c);
 int			ft_getopt(int nargc, char *const nargv[], const char *ostr);
 int			get_next_line(int fd, char **line, size_t buff_size);
 int			dir_size(char *dirs);
+void		log_init(char *str);
+void		log_write(char *str);
+void		log_close(void);
 
 /*
 ** ft_math
