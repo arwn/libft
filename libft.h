@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/08 13:25:48 by awindham          #+#    #+#             */
-/*   Updated: 2019/03/27 10:13:02 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/03/27 15:11:38 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,5 +137,6 @@ void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void		ft_lstadd(t_list **alst, void *new, size_t size);
 void		*ft_lstat(t_list *list, int index);
 int			ft_lstlen(t_list *list);
+void		ft_lstapd(t_list **alst, t_list *elem);
 
 #endif
