@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_getopt.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/08 10:40:13 by awindham          #+#    #+#             */
-/*   Updated: 2019/03/08 13:23:13 by awindham         ###   ########.fr       */
+/*   Updated: 2019/03/30 15:03:21 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ int		errrr(int nargc, char *place, const char *ostr, char *const nargv[])
 	if (g_optopt == 0)
 	{
 		place = EMSG;
-		if (strchr(ostr, '-') == NULL)
+		if (ft_strchr(ostr, '-') == NULL)
 			return (-1);
 		g_optopt = '-';
 	}
@@ -127,7 +127,7 @@ int		ft_getopt(int nargc, char *const nargv[], const char *ostr)
 	}
 	else
 		g_optopt = *place++;
-	if (g_optopt == ':' || (oli = strchr(ostr, g_optopt)) == NULL)
+	if (g_optopt == ':' || (oli = ft_strchr(ostr, g_optopt)) == NULL)
 	{
 		if (*place == 0)
 			++g_optind;
