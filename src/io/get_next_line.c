@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 09:34:34 by zfaria            #+#    #+#             */
-/*   Updated: 2018/12/18 14:58:33 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/03/31 11:32:07 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ int				get_next_line(const int fd, char **line, size_t buff_size)
 	status = grab_line(&threads[fd], line);
 	if (readstatus == 0 && status == 0 && !**line)
 	{
-		ft_strdel(&threads[fd]);
+		freev(*line, threads[fd], 0);
 		return (0);
 	}
 	else
