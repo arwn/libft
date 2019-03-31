@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/08 13:25:48 by awindham          #+#    #+#             */
-/*   Updated: 2019/03/31 11:32:27 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/03/31 11:35:43 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void		*ft_memset(void *s, int c, size_t n);
 void		*ft_memchr(const void *s, int c, size_t n);
 void		*ft_realloc(void *p, size_t o, size_t n);
 void		free_tab(char **tab);
-void		freev(void *, ...);
+void		freev(void *data, ...);
 
 /*
 ** ft_io
