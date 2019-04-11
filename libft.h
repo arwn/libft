@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/08 13:25:48 by awindham          #+#    #+#             */
-/*   Updated: 2019/03/31 11:35:43 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/04/10 14:47:11 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_putarr(char **str, char c);
 void		ft_putarr_fd(char **str, char c, int fd);
-void		ft_printf(char *fmt, ...);
 void		ft_printpad(int w, char *delim, int align, ...);
 
 /*
