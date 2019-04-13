@@ -6,7 +6,7 @@
 /*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/13 14:11:27 by awindham          #+#    #+#             */
-/*   Updated: 2019/04/13 14:54:20 by awindham         ###   ########.fr       */
+/*   Updated: 2019/04/13 15:23:26 by awindham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@
 # define UNION	TYPE union
 # define REG	register
 
-# define IS =
-# define EQ ==
 
 # define IF	if(
 # define THEN	){
@@ -45,6 +43,10 @@
 # define DONE	);
 # define LOOP	while(1){
 # define POOL	}
+
+#define INC ++;
+# define IS =
+# define EQ ==
 
 # define SKIP    ;
 # define DIV /
