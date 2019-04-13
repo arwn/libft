@@ -6,12 +6,14 @@
 /*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/13 14:11:27 by awindham          #+#    #+#             */
-/*   Updated: 2019/04/13 14:41:51 by awindham         ###   ########.fr       */
+/*   Updated: 2019/04/13 14:54:20 by awindham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MACROS_H
 # define MACROS_H
+
+# define VAR int
 
 # define LOCAL	static
 # define PROC	extern
