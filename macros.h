@@ -6,7 +6,7 @@
 /*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/13 14:11:27 by awindham          #+#    #+#             */
-/*   Updated: 2019/04/13 14:20:53 by awindham         ###   ########.fr       */
+/*   Updated: 2019/04/13 14:37:31 by awindham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 # define STRUCT	TYPE struct
 # define UNION	TYPE union
 # define REG	register
+
+# define IS =
+# define EQ ==
 
 # define IF	if(
 # define THEN	){
