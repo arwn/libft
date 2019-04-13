@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
+/*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/08 13:25:48 by awindham          #+#    #+#             */
-/*   Updated: 2019/03/31 11:35:43 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/04/13 14:11:42 by awindham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,67 +16,7 @@
 # include <string.h>
 # include <wchar.h>
 # include <libftstruct.h>
-
-
-/*
-**	UNIX shell
-**
-**	S. R. Bourne
-**	Bell Telephone Laboratories
-**
-**/
-
-#define LOCAL	static
-#define PROC	extern
-#define TYPE	typedef
-#define STRUCT	TYPE struct
-#define UNION	TYPE union
-#define REG	register
-
-#define IF	if(
-#define THEN	){
-#define ELSE	} else {
-#define ELIF	} else if (
-#define FI	;}
-
-#define BEGIN	{
-#define END	}
-#define SWITCH	switch(
-#define IN	){
-#define ENDSW	}
-#define FOR	for(
-#define WHILE	while(
-#define DO	){
-#define OD	;}
-#define REP	do{
-#define PER	}while(
-#define DONE	);
-#define LOOP	for(;;){
-#define POOL	}
-
-
-#define SKIP	;
-#define DIV	/
-#define REM	%
-#define NEQ	^
-#define ANDF	&&
-#define ORF	||
-
-#define TRUE	(-1)
-#define FALSE	0
-#define LOBYTE	0377
-#define STRIP	0177
-#define QUOTE	0200
-
-#define EOF	0
-#define NL	'\n'
-#define SP	' '
-#define LQ	'`'
-#define RQ	'\''
-#define MINUS	'-'
-#define COLON	':'
-
-#define MAX(a,b)	((a)>(b)?(a):(b))
+# include <macros.h>
 
 int			g_opterr;
 int			g_optind;
