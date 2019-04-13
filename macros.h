@@ -6,7 +6,7 @@
 /*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/13 14:11:27 by awindham          #+#    #+#             */
-/*   Updated: 2019/04/13 15:23:26 by awindham         ###   ########.fr       */
+/*   Updated: 2019/04/13 15:25:06 by awindham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@
 # define STRUCT	TYPE struct
 # define UNION	TYPE union
 # define REG	register
-
+# define INT    int
+# define CHAR   char
 
 # define IF	if(
 # define THEN	){
@@ -44,7 +45,7 @@
 # define LOOP	while(1){
 # define POOL	}
 
-#define INC ++;
+# define INC ++;
 # define IS =
 # define EQ ==
 
