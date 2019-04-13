@@ -6,7 +6,7 @@
 /*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/13 14:11:27 by awindham          #+#    #+#             */
-/*   Updated: 2019/04/13 14:37:31 by awindham         ###   ########.fr       */
+/*   Updated: 2019/04/13 14:41:51 by awindham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@
 # define STRIP	0177
 # define QUOTE	0200
 
-# define EOF	0
 # define NL	'\n'
 # define SP	' '
 # define LQ	'`'
