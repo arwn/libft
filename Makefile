@@ -1,7 +1,7 @@
 NAME=libft.a
 CC=gcc
 IDIR=include
-CFLAGS=-I. -Wall -Werror -Wextra -std=c89 -pedantic-errors $(CFLAGS_SPEED)
+CFLAGS=-I. -Wall -Werror -Wextra
 CFLAGS_SPEED=-finline-functions -Ofast
 DEPS=libft.h
 
