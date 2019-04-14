@@ -1,9 +1,8 @@
 NAME=libft.a
 CC=gcc
 IDIR=include
-CFLAGS=-I. -Wall -Werror -Wextra
-CFLAGS_SPEED=-finline-functions -Ofast
-DEPS=libft.h
+CFLAGS=-I. -Wall -Werror -Wextra -fsanitize=address
+
 
 vpath %.c src obj
 
