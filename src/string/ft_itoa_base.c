@@ -1,39 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 14:25:56 by zfaria            #+#    #+#             */
-/*   Updated: 2019/04/16 10:31:22 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/04/16 10:30:28 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int64_t n)
+static char	*g_tab_lo = "0123456789abcdef";
+static char *g_tab_up = "0123456789ABCDEF";
+
+char	*ft_itoa_base(uint64_t n, int base, int cas)
 {
-	char			*res;
-	int				i;
-	uint64_t		num;
+	char	*res;
+	int		i;
+	char	*tab;
 
 	if (n == 0)
 		return (ft_strdup("0"));
-	res = ft_strnew(33);
+	if (cas == 1)
+		tab = g_tab_up;
+	else
+		tab = g_tab_lo;
+	res = ft_strnew(65);
 	i = 0;
 	if (res)
 	{
-		num = n < 0 ? n * -1 : n;
-		while (num > 0)
+		while (n > 0)
 		{
-			res[i++] = num % 10 + '0';
-			num /= 10;
+			res[i++] = tab[n % base];
+			n /= base;
 		}
-		if (n < 0)
-			res[i++] = '-';
-		else
-			res[i] = 0;
+		res[i] = 0;
 		ft_strrev((unsigned char *)res);
 	}
 	return (res);

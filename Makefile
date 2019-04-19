@@ -1,7 +1,7 @@
 NAME=libft.a
 CC=gcc
 IDIR=include
-CFLAGS=-I. -Wall -Werror -Wextra -std=c89 -pedantic-errors $(CFLAGS_SPEED)
+CFLAGS=-I. -g -Wall -Werror -Wextra
 CFLAGS_SPEED=-finline-functions -Ofast
 DEPS=libft.h
 
@@ -22,10 +22,10 @@ $(NAME): $(OBJ)
 all: $(NAME)
 
 clean:
-	rm -rf $(OBJ)
+	@rm -rf $(OBJ)
 
 fclean: clean
-	rm -rf $(NAME) obj/
+	@rm -rf $(NAME) obj/
 
 re : fclean $(NAME)
 
