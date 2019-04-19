@@ -3,7 +3,6 @@ CC=gcc
 IDIR=include
 CFLAGS=-I. -Wall -Werror -Wextra -fsanitize=address
 
-
 vpath %.c src obj
 
 OBJ = $(subst .c,.o,$(subst src/*,obj,$(shell find . -name *.c)))
@@ -21,10 +20,10 @@ $(NAME): $(OBJ)
 all: $(NAME)
 
 clean:
-	rm -rf $(OBJ)
+	@rm -rf $(OBJ)
 
 fclean: clean
-	rm -rf $(NAME) obj/
+	@rm -rf $(NAME) obj/
 
 re : fclean $(NAME)
 

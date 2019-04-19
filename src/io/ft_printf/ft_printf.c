@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/01 14:25:56 by zfaria            #+#    #+#             */
-/*   Updated: 2019/04/16 10:31:22 by zfaria           ###   ########.fr       */
+/*   Created: 2019/01/16 13:42:50 by zfaria            #+#    #+#             */
+/*   Updated: 2019/04/15 13:35:13 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libftprintf.h>
+#include <stdarg.h>
+#include <unistd.h>
 
-char	*ft_itoa(int64_t n)
+int			ft_printf(const char *fmt, ...)
 {
-	char			*res;
-	int				i;
-	uint64_t		num;
+	va_list		args;
+	int			res;
+	t_vector	*vec;
 
-	if (n == 0)
-		return (ft_strdup("0"));
-	res = ft_strnew(33);
-	i = 0;
-	if (res)
-	{
-		num = n < 0 ? n * -1 : n;
-		while (num > 0)
-		{
-			res[i++] = num % 10 + '0';
-			num /= 10;
-		}
-		if (n < 0)
-			res[i++] = '-';
-		else
-			res[i] = 0;
-		ft_strrev((unsigned char *)res);
-	}
+	va_start(args, fmt);
+	vec = read_fmt_str(fmt, args);
+	va_end(args);
+	write(1, vec->v, vec->size);
+	res = vec->size;
+	vectordel(&vec);
 	return (res);
 }
