@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/08 13:25:48 by awindham          #+#    #+#             */
-/*   Updated: 2019/04/17 15:47:21 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/04/19 11:40:22 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <string.h>
 # include <wchar.h>
 # include <libftstruct.h>
+# include <libftprintf.h>
 
 int			g_opterr;
 int			g_optind;
