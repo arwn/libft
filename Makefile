@@ -1,7 +1,7 @@
 NAME=libft.a
 CC=gcc
 IDIR=include
-CFLAGS=-I. -Wall -Werror -Wextra -fsanitize=address
+CFLAGS=-I. -Wall -Werror -Wextra
 
 vpath %.c src obj
 
