@@ -6,7 +6,7 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 10:59:30 by zfaria            #+#    #+#             */
-/*   Updated: 2019/04/16 12:35:22 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/04/25 16:21:17 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int			ft_sprintf(char **str, const char *fmt, ...)
 	va_start(args, fmt);
 	vec = read_fmt_str(fmt, args);
 	va_end(args);
-	*str = vec->v;
+	*str = ft_strdup(vec->v);
 	res = vec->size;
 	vectordel(&vec);
 	return (res);
