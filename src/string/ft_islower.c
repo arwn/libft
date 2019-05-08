@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/30 16:01:09 by awindham          #+#    #+#             */
-/*   Updated: 2018/11/30 16:01:56 by awindham         ###   ########.fr       */
+/*   Created: 2019/05/08 10:19:44 by zfaria            #+#    #+#             */
+/*   Updated: 2019/05/08 10:26:28 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_islower(int c)
+int ft_islower(int c)
 {
 	return ((unsigned)c - 'a' < 26);
 }

@@ -3,16 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_countwords.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: awindham <awindham@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/01 15:26:01 by awindham          #+#    #+#             */
-/*   Updated: 2018/12/02 17:12:29 by awindham         ###   ########.fr       */
+/*   Created: 2019/05/08 10:19:10 by zfaria            #+#    #+#             */
+/*   Updated: 2019/05/08 10:19:12 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-** this is a comment
-*/
 
 int		ft_countwords(char const *str, char c)
 {
