@@ -6,11 +6,11 @@
 /*   By: zfaria <zfaria@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/08 10:19:44 by zfaria            #+#    #+#             */
-/*   Updated: 2019/05/08 10:26:28 by zfaria           ###   ########.fr       */
+/*   Updated: 2019/05/13 12:45:20 by zfaria           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_islower(int c)
+int	ft_islower(int c)
 {
 	return ((unsigned)c - 'a' < 26);
 }
